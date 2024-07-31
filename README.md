@@ -13,6 +13,39 @@
 
 `$ react-native link react-native-sweet-alert`
 
+Hi! I'm new on this kinda stuff, apparently this was developed on onlder version of react native
+So, I made a new proyect, using `npx create-expo --template`
+
+But reading about this I realizing that react-native link its deprecated at this time (31-July-2024)
+And Doesnt work anymore.
+
+In fact when you run `npx react-native link react-native-sweet-alert`
+it says: "command link not found"
+
+
+So then I reasearched about it and they say that the new method is "npx react-native-asset"
+but after running that command you must to make a file named:  npx react-native-asset
+and that file musty have that code inside:
+
+      `
+        module.exports = {
+          project: {
+              ios: {},
+              android: {}
+          },
+        };
+      `
+Apparently that file replaces config AndroidManifest file.
+Because on that newer version of react native proyects, that folder it doesnt exists anymore.
+
+Theres another issue about creating Bridging Header.
+I dont get it so well, you say that I need to create a .swift on main proyect and then editing on XCODE?
+
+Thanks in advance
+Gerardo
+
+
+
 ### Manual installation
 
 # On Android:
